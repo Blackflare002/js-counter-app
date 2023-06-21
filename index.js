@@ -9,9 +9,10 @@ function increment() {
 }
 
 const save = () => {
-	let countStr = count + " - ";
+	let countStr = " " + count + " -";
 	saveEl.textContent += countStr;
+	localStorage.setItem("count", count);
 	countEl.textContent = 0;
-    count = 0;
-    // console.log(count);
+	count = 0;
+	// console.log(count);
 };
