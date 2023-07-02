@@ -3,15 +3,27 @@ let saveEl = document.getElementById("save-el");
 let count = 0;
 let random = 0;
 
-if (localStorage.getItem(0)) {
-	saveEl.textContent +=
-		" " + localStorage.getItem(0);
+function retrieveFromStorage() {
+	const items = [];
+	for (let i = 0; i <= 5; i++) {
+		const key = String(i);
+		const item = localStorage.getItem(key);
+		if (item !== null) {
+			items.push(item);
+		}
+	}
+	return items;
 }
+
+const allItems = retrieveFromStorage();
+allItems.map((el) => {
+	saveEl.textContent += " " + el + " -";
+});
 
 function increment() {
 	count++;
 	countEl.textContent = count;
-	// console.log(count);
+	console.log("Count");
 }
 
 const save = () => {
@@ -24,5 +36,11 @@ const save = () => {
 	random += 1;
 	countEl.textContent = 0;
 	count = 0;
-	// console.log(count);
+	console.log("Save");
+};
+
+const clearFn = () => {
+	console.log("Clear");
+	saveEl.textContent = "Previous Entires:";
+	localStorage.clear();
 };

@@ -6,15 +6,27 @@
 		<div class="container">
 			<h1>People entered:</h1>
 			<h2 id="count-el">0</h2>
-			<button
-				id="increment-btn"
-				onclick="increment()"
-			>
-				INCREMENT
-			</button>
-			<button id="save-btn" onclick="save()">
-				SAVE
-			</button>
+			<div class="button-container">
+				<div class="row">
+					<button
+						id="increment-btn"
+						onclick="increment()"
+					>
+						INCREMENT
+					</button>
+					<button id="save-btn" onclick="save()">
+						SAVE
+					</button>
+				</div>
+				<div class="row">
+					<button
+						id="clear-btn"
+						onclick="clearFn()"
+					>
+						CLEAR
+					</button>
+				</div>
+			</div>
 			<p id="save-el">Previous Entires:</p>
 		</div>
 		<script src="./index.js"></script>

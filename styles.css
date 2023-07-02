@@ -39,12 +39,28 @@ button {
 	border-radius: 5px;
 }
 
+.button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
 #increment-btn {
 	background: darkblue;
 }
 
 #save-btn {
 	background: darkgreen;
+}
+
+#clear-btn {
+	background: darkred;
 }
 
 #save-el {
